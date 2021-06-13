@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    /* position: relative; */
+    height: 100vh;
+    width: 100%;     
+}
+#dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 14vh;
+    width: 13vw;
+    bottom: 0;
+    left:15vh;
+}
+#obstacle{
+    background-image: url(dragon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 15vh;
+    width: 13vw;
+    /* left:40vw; */
+    right:  40vw;
+    bottom: 0;
+    /* left:100vh; */
+    
+}
+.obstacleanimation{
+    animation: obstacleani 2.5s linear infinite;
+}
+
+#gameover{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    position: absolute;
+    left:20vw;
+    top:12vh;
+    font-size: 40px;
+    font-family: sans-serif;
+    /* border:2px solid red; */
+        /* background-color: red; */
+    /* visibility: hidden; */
+}
+#score{
+/* background-color: red; */
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    position: absolute;
+    left:35vw;
+    top:23vh;
+    font-size: 40px;
+    font-family: sans-serif;
+    border:2px solid black;
+}
+#finalScore{
+    
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    position: absolute;
+    left:35.7vw;
+    top:23vh;
+    font-size: 40px;
+    font-family: sans-serif;
+    visibility: hidden;
+    border:2px solid black;
+
+}
+.animatedDino{
+    animation: dinoanimation .5s linear;
+}
+
+@keyframes dinoanimation {
+    0%{
+        bottom:0;
+    }
+    50%{
+        bottom:35%;
+        
+    }
+    100%{
+        bottom:0;
+        /* right: 20px; */
+    }
+}
+@keyframes obstacleani {
+    0%{
+        right : 0;
+
+    }
+    100%{
+        right :100%;
+    }
+    
+    
+}
